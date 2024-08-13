@@ -23,12 +23,9 @@ class JsonDataStream(bt.feed.DataBase):
                                                  'wa_price','close','volume','market_price2','market_price3','admin_ted_quote','mp2valtrd','market_price3_trades_value',
                                                  'admitted_value','waval','trading_session','currency_id','trendclspr'])
             df = df[['trade_date','open','high','low','close','volume']]
-            #df['ticker'] = self.p.url.split('/')[-1] # Добавляем столбец 'ticker' с именем тикера
             url_part = self.p.url.split('/')[-1].split('?')[0]
             df['ticker'] = url_part
-            #df['ticker'] = df['ticker'].str.split('?').str[0]            
-            #df.set_index('trade_date', inplace=True)
-            df.to_csv('downloads_frame.csv', mode='a', header=False)  # Используем mode='a' для добавления данных в файл без перезаписи
+            df.to_csv('downloads_frame.csv', mode='a', header=False)  # используем mode='a' для добавления данных в файл без перезаписи
             #print(df)
 
         except Exception as e:
