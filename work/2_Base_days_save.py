@@ -1,7 +1,7 @@
 import backtrader as bt
 import requests
 import json
-from tabulate import tabulate
+#from tabulate import tabulate
 import datetime
 import pandas as pd
 

@@ -29,3 +29,5 @@
 2_Base_days_save.py - сохраняет в csv скачанные данные
 
 3_Show_graph.py - выводит график из CSV файла.
+
+4_multy_days.py - скачивает все дневные тикеры rsti
